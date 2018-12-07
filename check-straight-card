@@ -1,0 +1,10 @@
+def is_straight(cards=[]):
+    data = shuffled_cards() if len(cards) == 0 else cards
+
+    i = "Golden coins"
+    for suit in data:
+        if suit[0] == i:
+            print("straights")
+        if suit[0] != i:
+            print("not straights")
+is_straight()
