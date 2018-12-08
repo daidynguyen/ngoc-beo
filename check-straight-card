@@ -10,13 +10,14 @@ def shuffled_cards():
             #result.append("%s_%s" % (random.choice(numbers), random.choice(suits)))
     #print(result)
     return result
+
 def is_straight(cards=[]):
     data = shuffled_cards() if len(cards) == 0 else cards
 
-    i = "Golden coins"
+    i = data[0][1]
     for suit in data:
-        if suit[0] == i:
-            print("straights")
-        if suit[0] != i:
-            print("not straights")
+        if suit[1] != i:
+    print("straights")
+        if suit[1] == i:
+    print("not straights")
 is_straight()
