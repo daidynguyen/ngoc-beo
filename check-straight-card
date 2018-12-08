@@ -1,3 +1,15 @@
+import random
+def shuffled_cards():
+    result = []
+    suits = ("Golden coins", "Goblets", "Swords", "Clubs")
+    numbers = list(range(1,8)) + list(range(10,13))
+
+    for suit in suits:
+        for number in numbers:
+            result.append([random.choice(numbers), random.choice(suits)])  
+            #result.append("%s_%s" % (random.choice(numbers), random.choice(suits)))
+    #print(result)
+    return result
 def is_straight(cards=[]):
     data = shuffled_cards() if len(cards) == 0 else cards
 
